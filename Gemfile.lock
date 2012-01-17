@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    egg_carton (0.1)
+    egg_carton (0.2)
 
 GEM
   remote: http://rubygems.org/
