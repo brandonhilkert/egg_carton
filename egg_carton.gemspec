@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = EggCarton::VERSION
   s.authors     = ["Brandon Hilkert"]
   s.email       = ["brandonhilkert@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/brandonhilkert/egg_carton"
   s.summary     = %q{Egg Carton Format Helpers}
   s.description = %q{Egg Carton is a series of Ruby number helpers to help with reporting conversions and click-throughs.}
 
@@ -19,4 +19,11 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_development_dependency "rspec", "~> 2.8"
+  s.add_development_dependency "guard-rspec"
+  s.add_development_dependency "growl"
+  s.add_development_dependency "rake"
+  if RUBY_PLATFORM =~ /darwin/i
+    s.add_development_dependency 'rb-fsevent'
+    s.add_development_dependency 'growl'
+  end
 end
