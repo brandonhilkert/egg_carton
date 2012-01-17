@@ -48,13 +48,8 @@ module EggCarton
       return 0 if denominator.zero?
       as_percentage = opts[:percentage].nil? ? true : opts[:percentage]
 
-      if as_percentage
-        result = (numerator.to_f / denominator.to_f * 100).round(precision)
-        "#{result}%"
-      else
-        result = (numerator.to_f / denominator.to_f).round(precision)
-        "#{result}"
-      end
+      result = (numerator.to_f / denominator.to_f * 100).round(precision)
+      as_percentage ? "#{result}%" : "#{result}"
     end
   end
 end

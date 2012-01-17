@@ -39,6 +39,10 @@ module EggCarton
       it "should not calculate percentage" do
         test.conversion(2, 4, 4, :percentage => false).should_not include("%")
       end
+
+      it "should return 20.0" do
+        test.conversion(2, 10, 1, :percentage => false).should == "20.0"
+      end
     end
   end
 
